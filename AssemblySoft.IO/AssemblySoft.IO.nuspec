@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>AssemblySoft.IO</id>
+    <version>1.0.0</version>
+    <title>AssemblySoft.IO</title>
+    <authors>Carl Randall</authors>
+    <owners>AssemblySoft</owners>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://www.assemblysoft.com/packages</projectUrl>
+    <iconUrl>https://www.assemblysoft.com/favicon.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Easy to use clients for common file, directory and IO tasks.</description>
+    <summary>Copy directory, Delete file, Create a clean directory structure from an existing populated directory structure.</summary>
+    <tags>File Copy, Directory Copy, Delete File, Unzip directory, unzip file, Create empty directory structure from existing directory</tags>  
+  </metadata>
+</package>
