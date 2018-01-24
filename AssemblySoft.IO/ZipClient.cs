@@ -1,4 +1,5 @@
-﻿using System.IO;
+using System;
+using System.IO;
 using System.IO.Compression;
 
 namespace AssemblySoft.IO
@@ -75,7 +76,7 @@ namespace AssemblySoft.IO
             {
 
             }
-            catch(UnauthorizedAccessException uaex)
+            catch(System.UnauthorizedAccessException uaex)
             {
 
             }
