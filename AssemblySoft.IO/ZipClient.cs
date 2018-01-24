@@ -58,5 +58,35 @@ namespace AssemblySoft.IO
                 throw new IOException(e.Message, e);
             }
         }
+        
+        /// <summary>
+        /// Creates a zip archive from a directory
+        /// </summary>
+        /// <param name="sourceDirectory"></param>
+        /// <param name="destinationZipArchive"></param>
+        public static void CreateZipFromDirectory(string sourceDirectory, string destinationZipArchive)
+        {
+            //ToDo: Add Logger
+            try
+            {
+                ZipFile.CreateFromDirectory(sourceDirectory, destinationZipArchive, CompressionLevel.Fastest, true);
+            }
+            catch(DirectoryNotFoundException ex)
+            {
+
+            }
+            catch(UnauthorizedAccessException uaex)
+            {
+
+            }
+            catch(Exception e)
+            {
+
+            }
+            finally
+            {
+
+            }
+        }
     }
 }
