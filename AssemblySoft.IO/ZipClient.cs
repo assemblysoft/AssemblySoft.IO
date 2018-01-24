@@ -1,4 +1,5 @@
-﻿using System.IO;
+using System;
+using System.IO;
 using System.IO.Compression;
 
 namespace AssemblySoft.IO
@@ -56,6 +57,36 @@ namespace AssemblySoft.IO
             catch (System.Exception e)
             {
                 throw new IOException(e.Message, e);
+            }
+        }
+        
+        /// <summary>
+        /// Creates a zip archive from a directory
+        /// </summary>
+        /// <param name="sourceDirectory"></param>
+        /// <param name="destinationZipArchive"></param>
+        public static void CreateZipFromDirectory(string sourceDirectory, string destinationZipArchive)
+        {
+            //ToDo: Add Logger
+            try
+            {
+                ZipFile.CreateFromDirectory(sourceDirectory, destinationZipArchive, CompressionLevel.Fastest, true);
+            }
+            catch(DirectoryNotFoundException ex)
+            {
+
+            }
+            catch(System.UnauthorizedAccessException uaex)
+            {
+
+            }
+            catch(Exception e)
+            {
+
+            }
+            finally
+            {
+
             }
         }
     }
