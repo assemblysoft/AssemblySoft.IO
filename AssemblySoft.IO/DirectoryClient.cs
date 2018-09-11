@@ -102,8 +102,9 @@ namespace AssemblySoft.IO
         /// <param name="sourceDirName">source directory name</param>
         /// <param name="destDirName">destination directory name</param>
         /// <param name="copySubDirs">whether to copy subdirectories, defaults to false</param>
+        /// <param name="overwriteExistingFiles">whether to overwrite existing files</param>
         /// <remarks>syncronous operation, possibly quicker than async if files remain on the same drive as only headers require updating</remarks>
-        public static void DirectoryCopy(string sourceDirName, string destDirName, bool copySubDirs = false)
+        public static void DirectoryCopy(string sourceDirName, string destDirName, bool copySubDirs = false, bool overwriteExistingFiles = true)
         {
             try
             {
@@ -126,8 +127,8 @@ namespace AssemblySoft.IO
                 var files = dir.GetFiles();
                 foreach (var file in files)
                 {
-                    var temppath = Path.Combine(destDirName, file.Name);
-                    file.CopyTo(temppath, true);
+                    var destTempPath = Path.Combine(destDirName, file.Name);
+                    file.CopyTo(destTempPath, overwriteExistingFiles);
                 }
 
                 if (copySubDirs)
