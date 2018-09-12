@@ -127,8 +127,25 @@ namespace AssemblySoft.IO
                 var files = dir.GetFiles();
                 foreach (var file in files)
                 {
-                    var destTempPath = Path.Combine(destDirName, file.Name);
-                    file.CopyTo(destTempPath, overwriteExistingFiles);
+                    try
+                    {
+                        var destPath = Path.Combine(destDirName, file.Name);
+
+                        if (!overwriteExistingFiles)
+                        {//we do not want to overwrite the existing file if it exists
+
+                            if (File.Exists(destPath))
+                            {
+                                continue; //ignore the file and avoid having to handle the io exception
+                            }
+                        }
+
+                        file.CopyTo(destPath, overwriteExistingFiles);
+
+                    }
+                    catch(IOException)
+                    {//handle files that already exist when the flag is set not to overwrite                        
+                    }
                 }
 
                 if (copySubDirs)
