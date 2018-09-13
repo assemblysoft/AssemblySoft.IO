@@ -153,7 +153,7 @@ namespace AssemblySoft.IO
                     foreach (var subdir in dirs)
                     {
                         string temppath = Path.Combine(destDirName, subdir.Name);
-                        DirectoryCopy(subdir.FullName, temppath, copySubDirs);
+                        DirectoryCopy(subdir.FullName, temppath, copySubDirs, overwriteExistingFiles);
                     }
                 }
             }

@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblySoft.IO", "AssemblySoft.IO\AssemblySoft.IO.csproj", "{C164C7A6-A45B-409C-8BF0-C7D561149059}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblySoft.IO.UnitTests", "AssemblySoft.IO.UnitTests\AssemblySoft.IO.UnitTests.csproj", "{48FFA906-0791-43AD-B341-368FE241AE92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +17,15 @@ Global
 		{C164C7A6-A45B-409C-8BF0-C7D561149059}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C164C7A6-A45B-409C-8BF0-C7D561149059}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C164C7A6-A45B-409C-8BF0-C7D561149059}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48FFA906-0791-43AD-B341-368FE241AE92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48FFA906-0791-43AD-B341-368FE241AE92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48FFA906-0791-43AD-B341-368FE241AE92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48FFA906-0791-43AD-B341-368FE241AE92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B415E86F-DD72-40DC-B191-9489C5949169}
 	EndGlobalSection
 EndGlobal
